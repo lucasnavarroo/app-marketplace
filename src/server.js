@@ -28,7 +28,7 @@ class App {
   }
 
   routes() {
-    this.express.use(require("./router"));
+    this.express.use(require("./routes"));
   }
 }
 
