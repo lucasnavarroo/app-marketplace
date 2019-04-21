@@ -11,10 +11,14 @@ routes.post("/sessions", controllers.SessionController.store);
 
 routes.use(authMiddleware)
 
+//ads
 routes.get('/ads', controllers.AdController.index)
 routes.get('/ads/:id', controllers.AdController.show)
 routes.post('/ads', controllers.AdController.store)
 routes.put('/ads/:id', controllers.AdController.update)
 routes.delete('/ads/:id', controllers.AdController.destroy)
+
+//purchases
+routes.post('/purchases', controllers.PurchaseController.store)
 
 module.exports = routes;
